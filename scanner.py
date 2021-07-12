@@ -23,7 +23,7 @@ def scanfunc():
     
 
     root = tkinter.Tk()
-    root.title("SecTools")
+    root.title("SecTools-Network Scanner")
     root.geometry("420x720")
     root.config(background="#343434")
     root.resizable(height = None, width = None)
