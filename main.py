@@ -255,7 +255,7 @@ def ddospressed():
         ddosinterface()
 
 def ddosinterface():
-    global logo,imgh,lst,e2,e3,imgv
+    global logo,imgh,lst,e2,e3,imgv,update
     logo = PhotoImage(file="logo.png") 
 
     labelimage = Label(
@@ -311,6 +311,10 @@ def ddosinterface():
 
         )
     btnattack.pack(pady=(0,20))
+    
+    #Enable for Windows,Linux------x
+    #update=Listbox(root,width=200)
+    #update.pack()
 
 def runscan():
     call(["python", "scanner.py"])
@@ -329,6 +333,12 @@ def ddosattack():
          sent_packet = sent_packet + 1
          port_no = port_no + 1
          print ("Sent %s packets to %s throught port:%s"%(sent_packet,ipaddress,port_no))
+         
+         #Enable for Windows,Linux------x
+         #update.insert(END,"Sent %s packets to %s throught port:%s \n"%(sent_packet,ipaddress,port_no))
+         #update.see("end")
+         #root.update_idletasks()
+         
          if port_no == 65534:
            port_no = 1
 
